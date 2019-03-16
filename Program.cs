@@ -7,6 +7,13 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Reflection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.HostFiltering;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace SecretsDemo
 {
@@ -20,10 +27,8 @@ namespace SecretsDemo
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
-    }
 
-    
-        public static IWebHostBuilder ManualCreateDefaultBuilder(string[] args)
+                        public static IWebHostBuilder ManualCreateDefaultBuilder(string[] args)
         {
             var builder = new WebHostBuilder();
 
@@ -105,5 +110,5 @@ namespace SecretsDemo
             // .UseIIS()
             // .UseIISIntegration();
         }
-    
+    }
 }
