@@ -21,14 +21,16 @@ namespace SecretsDemo
     {
         public static void Main(string[] args)
         {
-            CreateWebHostBuilder(args).Build().Run();
+
+             CreateWebHostBuilder(args).Build().Run();
+
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+            .UseStartup<Startup>();
 
-                        public static IWebHostBuilder ManualCreateDefaultBuilder(string[] args)
+        public static IWebHostBuilder ManualCreateDefaultBuilder(string[] args)
         {
             var builder = new WebHostBuilder();
 
