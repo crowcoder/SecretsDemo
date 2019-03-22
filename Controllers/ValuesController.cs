@@ -17,7 +17,7 @@ namespace SecretsDemo.Controllers
             _config = config;
         }
         
-        // GET api/values
+        // GET api/values demo various providers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
